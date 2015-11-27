@@ -1,0 +1,22 @@
+Karenmendez9404@gmail.com
+27/11/2015
+
+setwd("/home/karen/Documents/bio-comparada-I-karen/semana5") ## go to the dir
+data<-read.csv(file="Data.csv", sep = ",",header = T) ## read the file
+head(data)## show first lines of the file
+
+## Number of individuals of each species
+individuals <- summary(data$Species) ## show the number of individuals of each speciess
+sum <- summary(data$Species)[1] ## amount of individuals for each specie
+
+## Height 
+tangent <- tan(datos$Angle.degrees * pi/180) ## calculate the tangent for angle degrees
+distance <- datos$Distance.m ## only take the column of distace in meters
+height <- distance*tangent ## calculate the height for each indivual
+
+## Mean
+mean(height [data$Species=="Betula pendula"]) ## calculate the mean for this species
+by(height, data$Species, mean) ## mean for all species
+
+## Variance 
+by(height, data$Species, var) ## calculate the variance for each species
